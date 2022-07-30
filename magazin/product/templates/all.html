@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}
+    {{ title }}
+{% endblock TITLE %}
+{% block CONTENT %}
+    {% for product in products %}
+        <div class="product">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <a href="http://localhost:8000/products/detail/{{ product.id }}" >Подивитись детальну інформацію</a>
+        </div>
+    {% endfor %}
+{% endblock CONTENT %}
